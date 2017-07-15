@@ -9,12 +9,24 @@ This was re-developed by watchng tutorials on youtube by Akhilesh srivatsava
 
 Run `npm start` for a dev server. Navigate to `http://localhost:1978/`. The app will automatically reload if you change any of the source files.
 
+To run the code in local environment please change the http url in below file as:-
+1)auth.services.ts
+2)UserService.ts
+3)ExpenseService.ts
+
+Example:-
+
+                       //CHANGE IN DEVELOPMENT MODE TO LOCALHOST!!!!
+        // return this.http.post('http://localhost:1978/api/login', JSON.stringify(oUser), options)
+        to
+               return this.http.post('/api/login', JSON.stringify(oUser), options)
+
 
 ## database server
 set the parameters for DATABASEURL.
 create mongo database in any website like mlab.
 Note down the user,db link and password of db.
-update config folder->config.js file with DB url from mlabs .
+update config folder->config.js file with DB url from mlabs or local mongod refernce .
 
 ## Note:-
 1)The angular application is in dist in parent directory folder.So any changes to angular application,the code should be build inside angular folder which will be "dist" folder.The contents then should be then copied to "dist" folder of parent directory.And then deployed to server.
