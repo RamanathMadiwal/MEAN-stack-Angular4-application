@@ -23,7 +23,7 @@ mongoose.connect(config.database, function(err){
 // use body parser so we can get info from POST and/or URL parameters
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('body-parser').json({ type : '*/*' }));
-
+app.set('view engine', 'html');
 // use morgan to log requests to the console
 app.use(morgan('dev'));
 
@@ -42,7 +42,7 @@ app.use(express.static(__dirname+"/dist"));
 
 app.get('/', function(req, res) {
 
-	res.render('index');
+	res.render('index.html');
 });
 
 app.post('/register', user.signup);
