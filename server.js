@@ -34,13 +34,15 @@ app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   next();
 });
-app.use(express.static(__dirname+"/dist"));
+// app.use(express.static(__dirname+"/dist"));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 
 // basic routes
 
 app.get('/', function(req, res) {
-	res.render('index.html');
+	// res.render('index.html');
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 app.post('/register', user.signup);
