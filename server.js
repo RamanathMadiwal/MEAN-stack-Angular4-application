@@ -12,6 +12,8 @@ var expense = require('./server/routes/expense.js');
 
 var port = process.env.PORT || config.serverport;
 
+var path =require("path");
+
 mongoose.connect(config.database, function(err){
 	if(err){
 		console.log('Error connecting database, please check if MongoDB is running.');
