@@ -84,7 +84,7 @@ export class ExpenseService {
 
         // return this.http.delete(`http://localhost:1978/api/expense/${expid}`, options)
         //     .map((response: Response) => response.json())
-        //     .catch(this.handleError);
+        //     .catch(this.handleError);heroku
 
       return this.http.delete(`/api/expense/${expid}`, options)
         .map((response: Response) => response.json())
