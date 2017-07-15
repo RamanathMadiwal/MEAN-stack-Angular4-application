@@ -37,14 +37,14 @@ app.use(function(req, res, next) {
   next();
 });
 // app.use(express.static(__dirname+"/dist"));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static('dist'));
 
 
 // basic routes
 
 app.get('/', function(req, res) {
 	// res.render('index.html');
-  res.sendFile(__dirname + '/dist/index.html');
+  res.sendFile("index.html");
 
 });
 
