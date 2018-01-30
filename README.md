@@ -1,7 +1,4 @@
 # ExpenseTracker 
-This was re-developed by watchng tutorials on youtube by Akhilesh srivatsava
-
-<a href="https://www.youtube.com/watch?v=lCYMcYeGl-Q:">Application Video</a>
 
 # Used AS MEAN / Angular4 Starter template
 
